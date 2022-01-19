@@ -1,0 +1,12 @@
+[Unit]
+Description=Express Kittens Service
+
+[Service]
+User=jenkins
+WorkingDirectory=/home/jenkins/.jenkins/workspace/test_project
+ExecStart=/bin/sh \
+    -c 'npm install &&\
+    npm start'
+
+[Install]
+WantedBy=multi-user.target
